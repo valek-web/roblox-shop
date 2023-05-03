@@ -1,0 +1,305 @@
+.popup-instruction {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: rgba($color: #060e26, $alpha: 0.8);
+
+  &__container {
+    position: relative;
+    top: 20px;
+    border-radius: 40px;
+    background-color: $color-grey;
+    background: #fff; 
+  }
+
+  &__logo {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    height: 11px;
+    color: $color-black;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+    font-size: 42px;
+    text-align: center;
+
+    &_description {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    font-size: 18px;
+    line-height: 26.1px;
+
+    &_accept {
+      font-size: 14px;
+      line-height: 20.3px;
+      opacity: 0.5;
+    }
+  }
+
+  .instruction-steps {
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__step {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      border-radius: 100%;
+      width: 50px;
+      height: 50px;
+      font-weight: 900;
+      font-size: 18px;
+      color: $color-white;
+      background-color: $color-lilac;
+    }
+
+    &__text {
+      margin-bottom: 20px;
+      font-size: 18px;
+      line-height: 26.1px;
+    }
+
+    &__link {
+      display: inline-block;
+      margin-bottom: 20px;
+      border-radius: 50px;
+      padding: 17px;
+      width: 100%;
+      font-size: 18px;
+      text-align: center;
+      background-color: $color-lilac;
+      user-select: none;
+    }
+
+    &__img_last {
+      margin-bottom: 20px;
+    }
+  }
+
+  .instruction-warning {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: $color-lilac-light;
+
+    &__img {
+      display: inline-block;
+      margin-right: 20px;
+      width: 24px;
+      height: 24px;
+      min-width: 24px;
+      min-height: 24px;
+    }
+
+    &__text {
+      font-size: 18px;
+      line-height: 26.1px;
+    }
+
+    &:last-child {
+      margin-top: 20px;
+    }
+  }
+
+  .instruction-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+
+    &__price {
+      position: absolute;
+      font-weight: 700;
+      font-size: 14px;
+      color: $color-lilac;
+
+      &_full {
+        left: 208px;
+        top: 61px;
+      }
+
+      &_user {
+        left: 352px;
+        top: 76px;
+      }
+    }
+  }
+
+  &__button {
+    transition: opacity 0.3s ease-in-out;
+
+    &_submite {
+      margin-bottom: 10px;
+      border-radius: 50px;
+      padding: 17px;
+      width: 100%;
+      font-size: 18px;
+      text-align: center;
+      color: $color-white;
+      background-color: $color-lilac;
+    }
+
+    &_close {
+      position: absolute;
+      right: -24px;
+      top: -24px;
+      display: inline-block;
+      border-radius: 100%;
+      width: 36px;
+      height: 36px;
+      background:
+        linear-gradient($color-black, $color-black),
+        linear-gradient($color-black, $color-black),
+        $color-lilac-light;
+      background-position: center;
+      background-size: 50% 2px, 2px 50%;
+      background-repeat: no-repeat;
+      transform: rotate(45deg);
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .instruction-price__full {
+    &_color {
+      padding: 10px 15px;
+      border-radius: 100px;
+      background-color: $color-lilac;
+      font-weight: 500;
+      color: $color-white;
+    }
+  }
+}
+
+.popup-instruction-visible {
+  display: flex;
+}
+
+.vipserver-popup {
+  .instruction-wrapper {
+    &__price {
+      &_full {
+        left: 162px;
+        top: 183px;
+      }
+
+      &_commission {
+        left: 156px;
+        top: 208px;
+      }
+
+      &_user {
+        left: 156px;
+        top: 235px;
+      }
+    }
+  }
+
+  .instruction-steps__link {
+    margin: 0;
+    cursor: pointer;
+  }
+}
+
+.vipserver-submit {
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+}
+
+@media (max-width: 768px) {
+  .popup-instruction {
+    &__container {
+      padding: 10px 15px;
+      top: 0;
+    }
+
+    &__logo {
+      margin-bottom: 20px;
+    }
+
+    &__title {
+      margin-bottom: 30px;
+      font-size: 25px;
+      line-height: 115%;
+
+      &_description {
+        margin-bottom: 15px;
+      }
+    }
+
+    &__text {
+      margin-bottom: 15px;
+      font-size: 16px;
+      line-height: 135%;
+    }
+
+    &__button {
+      font-size: 16px;
+
+      &_close {
+        right: -15px;
+        top: -15px;
+      }
+    }
+
+    .instruction-steps {
+      &__item {
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+      }
+
+      &__step {
+        margin-bottom: 15px;
+        width: 35px;
+        height: 35px;
+      }
+
+      &__text {
+        margin-bottom: 15px;
+        font-size: 16px;
+        line-height: 135%;
+      }
+
+      &__link {
+        padding: 14px;
+        font-size: 16px;
+      }
+    }
+
+    .instruction-warning {
+      padding: 10px;
+
+      &__img {
+        margin-right: 10px;
+      }
+
+      &__text {
+        font-size: 16px;
+        line-height: 135%;
+      }
+    }
+  }
+}

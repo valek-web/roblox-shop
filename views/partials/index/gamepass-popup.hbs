@@ -1,0 +1,204 @@
+<section class='gamepass-popup popup-instruction'>
+	<div class='popup-instruction__container'>
+		<div class='popup-instruction__content'>
+			<div class='block' id='block_wrap'>
+				<div class='block__wrapper' id='block_wrapper1'>
+
+					<div class='block_content'>
+						<h1 class='title-block'>Выберите свой <span>Place</span></h1>
+						{{! <div id='item' onclick='btnOnclick()' class='item'></div> }}
+						<div class='place-items'></div>
+						<div id='button' class='btn'>
+							<span class='button' onclick='onClickbutton1()'>Продолжить</span>
+							<div id='blocker' class='blocker'></div>
+						</div>
+					</div>
+				</div>
+
+				<div class='block__wrapper block_none' id='block_wrapper2'>
+					<div class="erorr" id="error1">
+						<p>Не создан GAME PASS, проверьте и создайте его заного</p>
+					</div>
+					<div class='block_content'>
+						<h1 class='title-block'>Создайте <span>Game Pass</span></h1>
+						<p class='block_text'>
+							Если у Вас нет картинки, можете использовать
+							<a href='img/f7c9f2a9f31bf5748c52fa1087126828a5333ac8.png' target="_blank">нашу</a>
+						</p>
+						<div class='block-wrapper'>
+							<div class='wrapper'>
+								<div class="frontBLock"></div>
+								<div class='inputFile'>
+									<div class='input__image'>
+										<img src='' height='200' />
+										<svg class='imgSvg' focusable='false' viewBox='0 0 24 24' aria-hidden='true'>
+											<path
+												d='M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z'>
+											</path>
+										</svg>
+									</div>
+									<div class='lable'>
+										<button id='lableBtn' class='upload-btn' href='#'>
+											Upload Image
+										</button>
+
+										<p>Format: *.jpg, *.png, *.bmp</p>
+										<p>Image will be visible to others after moderation.</p>
+									</div>
+								</div>
+								<div class='inputText'>
+									<div class='inputPlace-wrap'>
+										<input id='inputText' class='input__text' type='text' readonly />
+										<p class='place-p1 placegolder' id='placehold1'>Name *</p>
+										<p class='place-p2 place_active place_notActive' id='placehold2'>
+											NamePicture
+										</p>
+									</div>
+
+									<p>Up to 50 characters</p>
+								</div>
+								<div class='inputTextarea'>
+									<textarea type='text' placeholder='Description'></textarea>
+									<p>Up to 1000 characters</p>
+								</div>
+								<div class='line'></div>
+								<div class='buttons'>
+									<a class='primary-btn' href='#'>Cancel</a>
+									<a id='secBtn' class='secondary-btn gamepass-submit' href='#'>Create Pass</a>
+								</div>
+							</div>
+						</div>
+						<div id='button' class='btn active'>
+							<span id='button1' class='button' onclick='onClickbutton2()'>Создать</span>
+							<span id='button2' class='button block_none' onclick='onClickbutton4()'>Продолжить</span>
+							<span id='button3' class='button block_none' onclick='onClickbutton4()'>Создать</span>
+						</div>
+					</div>
+				</div>
+
+				<div class='block__wrapper block_none' id='block_wrapper3'>
+					<div class="erorr" id="error2">
+						<p>Не верная цена, проверьте и настройте цену на <span class="error-price">36</span>R$</p>
+					</div>
+					<div class='block_content'>
+						<h1 class='title-block'>Измените <span>Game Pass</span></h1>
+						<p class='block_text'>
+							Включите «Item for sale» и установите цену
+							<span class="price">36 R$</span>
+						</p>
+						<div class='block-wrapper'>
+							<div class='wrapper wrapper2'>
+								<div class='frontBLock frontBLock2'></div>
+								<div class='flex_wrap'>
+									<div class='sidebar'>
+										<p class='title'>robuxshop.ru</p>
+										<div class='line'></div>
+										<h2 class='subtitle'>Datail</h2>
+										<ul>
+											<li>Basic Settings</li>
+											<li class='li-active'>Sale</li>
+											<li class='li-before'>
+												Advertise
+												<svg class='link-svg' focusable='false' viewBox='0 0 24 24'
+													aria-hidden='true'>
+													<path
+														d='M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z'>
+													</path>
+												</svg>
+											</li>
+										</ul>
+										<h2 class='subtitle'>related links</h2>
+										<p class='li-before li-before-margin'>
+											My Inventory
+											<svg class='link-svg' focusable='false' viewBox='0 0 24 24'
+												aria-hidden='true'>
+												<path
+													d='M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z'>
+												</path>
+											</svg>
+										</p>
+									</div>
+									<div class='content'>
+										<h1 class='content_title'>Sales</h1>
+										<p class="content_date">Total sales: 0</p>
+										<p class="content_date">Sold in last 7 days: 0</p>
+										<div class='switch_wrap'>
+											<div class='switch-btn' id='switcher'></div>
+											<p class='text'>Item for Sale</p>
+										</div>
+										<div class='input_wrap'>
+											<div class='inputPlace-wrap inputPlace-wrap-m inputPlace-wrap2'>
+												<div class='input_img'>
+													<svg class='MuiSvgIcon-root MuiSvgIcon-fontSizeSmall'
+														focusable='false' viewBox='0 0 28 28' aria-hidden='true'>
+														<path
+															d='M23.402,5.573C25.009,6.501 26,8.217 26,10.073L26,17.929C26,19.786 25.009,21.501 23.402,22.429L16.597,26.358C14.99,27.286 13.009,27.286 11.402,26.358L4.597,22.429C2.99,21.501 2,19.786 2,17.929L2,10.073C2,8.217 2.99,6.501 4.597,5.573L11.402,1.645C13.009,0.717 14.99,0.717 16.597,1.645L23.402,5.573ZM12.313,3.428L5.686,7.254C4.642,7.857 4,8.97 4,10.176L4,17.827C4,19.032 4.642,20.146 5.686,20.749L12.313,24.574C13.357,25.177 14.642,25.177 15.686,24.574L22.313,20.749C23.357,20.146 24,19.032 24,17.827L24,10.176C24,8.97 23.357,7.857 22.313,7.254L15.686,3.428C14.642,2.825 13.357,2.825 12.313,3.428ZM15.385,5.566L20.614,8.584C21.471,9.079 22,9.994 22,10.985L22,17.022C22,18.012 21.471,18.927 20.614,19.422L15.385,22.441C14.528,22.936 13.471,22.936 12.614,22.441L7.385,19.422C6.528,18.927 6,18.012 6,17.022L6,10.985C6,9.994 6.528,9.079 7.385,8.584L12.614,5.566C13.471,5.071 14.528,5.071 15.385,5.566ZM11,17.003L17,17.003L17,11.003L11,11.003L11,17.003Z'>
+														</path>
+													</svg>
+												</div>
+												<input id='inputText' class='inputRob' type='text' />
+												<p class='place-p1 placegolder' id='placehold3'>
+													Price in Robux
+												</p>
+												<p class='place-p2 place_active place_notActive' id='placehold4'>
+													100
+												</p>
+											</div>
+											<div class='texts'>
+												<p class="content_date">Creator earnings (70%)</p>
+												<p class='robImg'>
+													<svg class='MuiSvgIcon-root MuiSvgIcon-fontSizeSmall'
+														focusable='false' viewBox='0 0 28 28' aria-hidden='true'>
+														<path
+															d='M23.402,5.573C25.009,6.501 26,8.217 26,10.073L26,17.929C26,19.786 25.009,21.501 23.402,22.429L16.597,26.358C14.99,27.286 13.009,27.286 11.402,26.358L4.597,22.429C2.99,21.501 2,19.786 2,17.929L2,10.073C2,8.217 2.99,6.501 4.597,5.573L11.402,1.645C13.009,0.717 14.99,0.717 16.597,1.645L23.402,5.573ZM12.313,3.428L5.686,7.254C4.642,7.857 4,8.97 4,10.176L4,17.827C4,19.032 4.642,20.146 5.686,20.749L12.313,24.574C13.357,25.177 14.642,25.177 15.686,24.574L22.313,20.749C23.357,20.146 24,19.032 24,17.827L24,10.176C24,8.97 23.357,7.857 22.313,7.254L15.686,3.428C14.642,2.825 13.357,2.825 12.313,3.428ZM15.385,5.566L20.614,8.584C21.471,9.079 22,9.994 22,10.985L22,17.022C22,18.012 21.471,18.927 20.614,19.422L15.385,22.441C14.528,22.936 13.471,22.936 12.614,22.441L7.385,19.422C6.528,18.927 6,18.012 6,17.022L6,10.985C6,9.994 6.528,9.079 7.385,8.584L12.614,5.566C13.471,5.071 14.528,5.071 15.385,5.566ZM11,17.003L17,17.003L17,11.003L11,11.003L11,17.003Z'>
+														</path>
+													</svg>
+													<span id='span1' class='commission'>--</span>
+													<span id='span2' class='commission-none'>70</span>
+												</p>
+											</div>
+											<div class='line'></div>
+											<div class='buttons'>
+												<a class='primary-btn' href='#'>Cancel</a>
+												<a id='secBtnRob' class='secondary-btn' href='#'>Create Pass</a>
+											</div>
+										</div>
+
+										<!-- switch-on для включения -->
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id='button' class='btn'>
+							<span id='button4' class='button active' onclick='onClickbutton5()'>Изменить</span>
+							<span id='button5' class='button active block_none' onclick='onClickbutton6()'>Купить</span>
+							<span id='button6' class='button active block_none'>Изменить</span>
+						</div>
+					</div>
+				</div>
+
+				<div class='block__wrapper block_none' id='block_wrapper4'>
+					<div class="erorr" id="error3">
+						<p>Нет открытых Place, измените тип Place на Public</p>
+					</div>
+					<div class='block_content'>
+						<h1 class='title-block'>Измените тип Place на <span>Public</span></h1>
+						<br>
+						<br>
+						<br><br>
+					    <p>	Инструкция </p>
+						<br>
+						<br>
+						<br><br>
+					</div>
+					<div id='button' class='btn'>
+						<span id='button7' class='button active' onclick='onClickbutton8()'>Изменить</span>
+						<span id='button8' class='button active block_none' onclick='onClickbutton9()'>Продолжить</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button
+			class='popup-instruction__button popup-instruction__button_close popup__close gamepass-close simple-instruction'></button>
+	</div>
+</section>

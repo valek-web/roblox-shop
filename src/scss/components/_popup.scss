@@ -1,0 +1,114 @@
+.popup {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: rgba($color: #060e26, $alpha: 0.8);
+
+    &__container {
+        position: relative;
+        border-radius: 10px;
+        padding: 50px 40px;
+        min-width: 300px;
+        max-width: 600px;
+        background-color: $color-grey;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+        line-height: 45px;
+    }
+
+    &__text {
+        margin-bottom: 40px;
+    }
+
+    &__price {
+        font-weight: 500;
+        color: $color-lilac;
+    }
+
+    &__link {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+
+    
+
+        &_go {
+            padding: 18px 38px;
+            width: inherit;
+            height: inherit;
+        }
+
+        &_go.popup__close {
+            color: #fff;
+            background-color: $color-lilac;
+            transition: all 0.3s ease 0s;
+            &:hover{
+                background-color: #708EFC;
+            }
+        }
+    }
+
+    &__button {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        display: inline-block;
+        border-radius: 100%;
+        width: 36px;
+        height: 36px;
+        background: linear-gradient($color-black, $color-black),
+            linear-gradient($color-black, $color-black), $color-lilac-light;
+        background-position: center;
+        background-size: 50% 2px, 2px 50%;
+        background-repeat: no-repeat;
+        transform: rotate(45deg);
+        transition: opacity 0.3s ease-in-out;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+.popup-visible {
+    display: flex;
+}
+
+.error-popup {
+    z-index: 2001;
+
+    &__text {
+        margin-bottom: 20px;
+    }
+}
+
+.successful {
+    .popup__text {
+        margin-bottom: 40px;
+
+        &:not(:nth-child(3)) {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+td {
+    padding: 5px 20px;
+}

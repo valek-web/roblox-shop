@@ -1,0 +1,186 @@
+<section id='Feedback' class='feedback _anim-items' data-aos='fade-right' data-aos-delay='200'>
+	<div class='feedback__container container'>
+		<div class='feedback__content feedback-content'>
+			<div
+				class='feedback-content__left feedback-content__instructions feedback-instructions'
+			>
+				<h2 class='feedback-instructions__title'>
+					Покупка робуксов
+				</h2>
+
+				<p class='feedback-instructions__text'>
+					1. Ознакомьтесь с
+					<a
+						href='/pdf/instruction-gamepass.pdf'
+						target='_blank'
+						class='feedback-instructions__link_text'
+					>инструкцией</a><br />
+				</p>
+				<p class='feedback-instructions__text'>2. Заполните форму оплаты и нажмите купить</p>
+				<p class='feedback-instructions__text'>3. Оплатите заказ удобным для Вас способом</p>
+
+				<p class='feedback-instructions__text'>
+					Вот и все! В течении указанного срока к Вам придут желанные робуксы :)
+				</p>
+
+				{{! Методы }}
+				{{! <div class="feedback-instructions__amount">
+                Доступно робуксов: <span class="feedback-instructions__amount_number">29000 R$</span>
+            </div> }}
+
+				{{! <a href="/pdf/instruction-vipserver.pdf" target="_blank" class="feedback-instructions__link link-button">
+                Инструкция
+            </a> }}
+				{{! Методы }}
+			</div>
+
+			<div class='feedback-content__right feedback-content__form feedback-form'>
+				<div class='feedback-form__top'>
+					<ul class='feedback-form__conversion feedback-conversion'>
+						<li class='feedback-conversion__item'>
+							<span class='feedback-conversion__text'>
+								Потратите
+							</span>
+
+							<h3 class='feedback-conversion__title feedback-conversion__title_spent'>
+								0 ₽
+							</h3>
+						</li>
+
+						<li class='feedback-conversion__item'>
+							<span class='feedback-conversion__text'>
+								Получите
+							</span>
+
+							<h3
+								class='feedback-conversion__title feedback-conversion__title_receive'
+							>
+								0 R$
+							</h3>
+						</li>
+					</ul>
+
+					<form id='form' class='form'>
+						<div class='form__methods form-methods'>
+							<h3 class='form-methods__title'>
+								Введите свои данные
+							</h3>
+
+							{{! Методы }}
+							{{! <ul class="form-methods__list">
+                            <li class="form-methods__item">
+                                <input class="form-methods__input form-methods__input_vipserver" id="feedback-button-2" type="radio" checked name="method" value="vipserver">
+                                <label class="form-methods__label" for="feedback-button-2">VIP Сервер</label>
+                            </li>
+
+                            <li class="form-methods__item">
+                                <input class="form-methods__input form-methods__input_gamepass" id="feedback-button-1" type="radio" name="method" value="gamepass" disabled>
+                                <label class="form-methods__label form-methods__label_gamepass" for="feedback-button-1">Game Pass</label>
+                            </li>
+                        </ul> }}
+							{{! Методы }}
+						</div>
+
+						<div class='form__data form-data'>
+							<div class='form-data__top'>
+								<div class='form-data__wrapper'>
+									<input
+										class='form-data__input input-name required'
+										placeholder='Никнейм'
+										name='nickname'
+										autocomplete='off'
+										minlength='1'
+										maxlength='20'
+										type='text'
+										inputmode='latin-name'
+									/>
+
+									<span class='form-data__message'>Введите правильный никнейм</span>
+									<button class='check' disabled>
+										<span>
+											Проверить покупки
+										</span>
+									</button>
+
+								</div>
+
+								{{! <div class="form-data__wrapper">
+                                <input class="form-data__input input-email"
+                                    placeholder="Введите Вашу почту"
+                                    name="email"
+                                    autocomplete="off"
+                                    maxlength="25"
+                                    type="email"
+                                >
+
+                                <a class="form-data__tooltip" data-tooltip="Данное поле не является обязательным. Оно предназначенно для получения уведомлений"></a>
+                            </div> }}
+
+								{{! <div class="form-data__wrapper">
+                                    <input class="form-data__input input-tel"
+                                    placeholder="Введите Ваш номер телефона"
+                                    name="phone"
+                                    autocomplete="off"
+                                    minlength="10"
+                                    type="tel"
+                                >
+
+                                <a class="form-data__tooltip" data-tooltip="Данное поле не является обязательным. Оно предназначенно для получения уведомлений"></a>
+                            </div> }}
+							</div>
+
+							<div class='form-data__bottom'>
+								<input
+									class='form-data__input form-data__spent input-number required'
+									placeholder='Потратите ₽'
+									name='spent'
+									autocomplete='off'
+									step='1'
+									data-min={{{minSpent}}}
+									data-max={{{maxSpent}}}
+									data-rate={{{rate}}}
+									type='text'
+									onpaste='return false'
+								/>
+
+								<input
+									class='form-data__input form-data__receive'
+									placeholder='Получите R$'
+									name='receive'
+									autocomplete='off'
+									step='1'
+									data-min={{{minRobuxBuy}}}
+									data-max={{{maxRobuxBuy}}}
+									data-rate={{{rate}}}
+									type='text'
+									onpaste='return false'
+								/>
+
+								<span class='form-data__message'>Введите правильную сумму</span>
+							</div>
+
+							<div class='form-data__submit'>
+								<p class='form-data__text'>
+									Нажимая на кнопку, я соглашаюсь на&nbsp;<a
+										class='form-data__link'
+										href='/pdf/policy.pdf'
+										target='_blank'
+									>обработку персональных данных</a>
+									на&nbsp;<a
+										class='form-data__link'
+										href='/pdf/policy.pdf'
+										target='_blank'
+									>политику конфиденциальности</a>
+								</p>
+
+								<button class='form-data__button link-button' type='submit'><span
+									>Купить робуксы</span><div class='loader'><div></div><div
+										></div><div></div><div></div></div></button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

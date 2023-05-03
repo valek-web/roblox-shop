@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /pdf/policy.pdf
+Allow: /
+User-agent: Googlebot
+Disallow: /pdf/policy.pdf
+Allow: /
+User-agent: YandexBot
+Disallow: /pdf/policy.pdf
+Allow: /
+Sitemap: https://robuxshop.ru/sitemap.xml

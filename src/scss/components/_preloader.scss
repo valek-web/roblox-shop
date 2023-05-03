@@ -1,0 +1,118 @@
+.preloader {
+    position: fixed;
+    top: 0;
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    // background: url("../img/space-background.jpg") center/cover no-repeat;
+    background-color: #060e26;
+    transition: opacity 0.3s linear;
+
+    &__container {
+        margin: 0 auto;
+    }
+
+    // &__content {
+    //   position: relative;
+    //   margin: 0 auto;
+    //   width: 80px;
+    //   height: 80px;
+    // }
+
+    // &__item {
+    //   animation: preloader-animation 2.76s infinite linear both;
+    // }
+}
+
+.preloader-hide {
+    opacity: 0;
+}
+
+// @keyframes preloader-animation {
+//   0%,
+//   10% {
+//     opacity: 0;
+//     transform: perspective(136px) rotateX(-180deg);
+//   }
+
+//   25%,
+//   75% {
+//     opacity: 1;
+//     transform: perspective(136px) rotateX(0deg);
+//   }
+
+//   90%,
+//   100% {
+//     opacity: 0;
+//     transform: perspective(136px) rotateY(180deg);
+//   }
+// }
+
+.circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.circle:before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #465694, 0 0 0 20px #5566ad, 0 0 0 30px #6579ca, 0 0 0 40px #7289da,
+        0 0 0 50px #7c94ec, inset 0 0 40px #525e8f;
+}
+// 849eff
+// 414c79
+.dots {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 50%;
+    animation: animate 10s linear infinite;
+}
+
+.dots:before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    left: calc(50% - 5px);
+    top: 0;
+    box-shadow: 50px 0 0 #fff, -65px -50px 0 #fff, -65px 50px 0 #fff, -55px 0 0 #f07e6e,
+        45px 35px 0 #84cdfa, -40px -40px 0 #5ad1cd, 40px -40px 0 #fff, 55px -59px 0 #fff;
+    animation: animate 10s linear infinite;
+}
+
+.dots:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    left: calc(50% - 5px);
+    bottom: 0;
+    box-shadow: -50px 0 0 #fff, 65px 50px 0 #fff, 65px -50px 0 #fff, 55px 0 0 #84cdfa,
+        -45px -35px 0 #f07e6e, 40px 40px 0 #5ad1cd, -40px 40px 0 #fff, -55px 59px 0 #fff;
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

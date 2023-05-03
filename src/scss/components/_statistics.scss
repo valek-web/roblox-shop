@@ -1,0 +1,26 @@
+.statistics {
+	.big-inf {
+		font-size: 40px;
+	}
+
+	.statistics-list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&__item {
+			border: 5px solid $color-lilac-light;
+			border-radius: 15px;
+			padding: 30px 25px;
+			width: 32.4%;
+		}
+
+		&__title {
+			color: $color-lilac;
+		}
+
+		&__text {
+			font-weight: 500;
+		}
+	}
+}

@@ -1,0 +1,64 @@
+.error-page {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 199;
+  background: url("../img/space-background.jpg") center/cover, no-repeat;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 220px;
+    line-height: 115%;
+    text-align: center;
+    color: $color-white;
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+    font-size: 74px;
+    line-height: 115%;
+    text-align: center;
+    color: $color-white;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    text-align: center;
+    color: $color-white;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__link {
+    display: inline-block;
+    order: 1;
+    width: 50px;
+    height: 50px;
+
+    &_telegramm {
+      order: 0;
+      margin-right: 15px;
+      background: url("../img/social-telegramm.svg") center/cover no-repeat;
+    }
+
+    &_wk {
+      order: 2;
+      margin-left: 15px;
+      background: url("../img/social-wk.svg") center/cover no-repeat;
+    }
+  }
+}
