@@ -423,6 +423,8 @@ document.addEventListener('DOMContentLoaded', () => {
 					block1.classList.add("block_none")
 					block4.classList.remove("block_none")
 					instructionGamepass.classList.add('popup-instruction-visible')
+					timeoutAnimation()
+					setInterval(timeoutAnimation, 10000)
 				} else {
 					formAddError(name)
 					name.nextSibling.nextSibling.classList.add('form-data__message_active')
@@ -728,6 +730,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	let span1 = document.getElementById('span1')
 	let span2 = document.getElementById('span2')
 	let placehold3 = document.getElementById('placehold3')
+	const icon_btn = document.querySelectorAll(".icon-btn")
+	const dropdown = document.querySelector(".dropdown")
+	const dropdown_element = document.querySelector("#dropdown__element")
+	const subtitle_private = document.querySelector(".subtitle_private")
+	const subtitle_public = document.querySelector(".subtitle_public")
 
 	function timeout() {
 		setTimeout(() => {
@@ -745,5 +752,36 @@ document.addEventListener('DOMContentLoaded', () => {
 		setTimeout(() => {
 			secBtnRob.classList.toggle('animationButtons')
 		}, 4500)
+	}
+
+	const timeoutAnimation = () => {
+		setTimeout(() => {
+			icon_btn.forEach(i => {
+				i.classList.toggle("icon-btn-active")
+			})
+		}, 500)
+		setTimeout(() => {
+			icon_btn[1].classList.toggle("icon-btn-bg")
+		}, 2500)
+		setTimeout(() => {
+			dropdown.classList.toggle("dropdown-active")
+		}, 5000)
+		setTimeout(() => {
+			dropdown_element.classList.toggle("dropdown__element-bg")
+		}, 7500)
+		setTimeout(() => {
+			subtitle_private.classList.toggle("block_none")
+			subtitle_public.classList.toggle("block_none")
+		}, 8000)
+		setTimeout(() => {
+			icon_btn.forEach(i => {
+				i.classList.toggle("icon-btn-active")
+			})
+			icon_btn[1].classList.toggle("icon-btn-bg")
+			dropdown.classList.toggle("dropdown-active")
+			dropdown_element.classList.toggle("dropdown__element-bg")
+			subtitle_private.classList.toggle("block_none")
+			subtitle_public.classList.toggle("block_none")
+		}, 9000)
 	}
 })
